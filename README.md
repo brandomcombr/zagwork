@@ -7,7 +7,7 @@ __Executar o projeto backend__
 1. Clonar o repositório do projeto backend
 2. Importar como projeto maven no STS
 3. Rodar com o SpringBoot
-
+---
 __Executar o projeto frontend__
 1. Clonar o repositório do projeto frontend
 2. Instalar o Angular cli
