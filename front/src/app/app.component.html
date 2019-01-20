@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Zag Work Project
+  </h1>
+</div>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nome Cliente" name="cliente" [(ngModel)]="data.cliente">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Limite de crédito" type="number" name="credito" [(ngModel)]="data.credito">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Risco" name="txJuros" [(ngModel)]="data.txJuros">
+      <mat-option *ngFor="let opt of options" [value]="opt.value">
+        {{opt.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-button type="button" (click)="salvar()">Salvar</button>
+</form>
+
+<mat-card *ngFor="let row of dataSource">{{row.cliente}} - {{row.credito}} - {{row.risco}} - {{row.txJuros}}</mat-card>
+
+
+<router-outlet></router-outlet>
